@@ -323,7 +323,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LINK_ENV = Sandbox;
-				LINK_KEY = YOUR_PLAID_PUBLIC_KEY;
+				LINK_KEY = 558f0fb021b507eaaefcf33b4ea86a;
 				PRODUCT_BUNDLE_IDENTIFIER = com.plaid.linkdemo.swift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -341,7 +341,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LINK_ENV = Production;
-				LINK_KEY = YOUR_PLAID_PUBLIC_KEY;
+				LINK_KEY = 558f0fb021b507eaaefcf33b4ea86a;
 				PRODUCT_BUNDLE_IDENTIFIER = com.plaid.linkdemo.swift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
