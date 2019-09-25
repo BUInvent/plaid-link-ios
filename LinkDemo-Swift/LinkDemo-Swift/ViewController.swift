@@ -52,6 +52,10 @@ class ViewController: UIViewController {
         presentPlaidLinkWithSharedConfiguration()
 #endif
     }
+    
+//    func exchangeToken(publicToken: String, secret: String, publicKey: String){
+//        let client =
+//    }
 
     func handleSuccessWithToken(_ publicToken: String, metadata: [String : Any]?) {
         presentAlertViewWithTitle("Success", message: "token: \(publicToken)\nmetadata: \(metadata ?? [:])")
@@ -89,7 +93,7 @@ class ViewController: UIViewController {
     func presentPlaidLinkWithCustomConfiguration() {
         // <!-- SMARTDOWN_PRESENT_CUSTOM -->
         // With custom configuration
-        let linkConfiguration = PLKConfiguration(key: "<#YOUR_PLAID_PUBLIC_KEY#>", env: .sandbox, product: .auth)
+        let linkConfiguration = PLKConfiguration(key: "558f0fb021b507eaaefcf33b4ea86a", env: .sandbox, product: .auth)
         linkConfiguration.clientName = "Link Demo"
         let linkViewDelegate = self
         let linkViewController = PLKPlaidLinkViewController(configuration: linkConfiguration, delegate: linkViewDelegate)

@@ -47,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func setupPlaidWithCustomConfiguration() {
         // <!-- SMARTDOWN_SETUP_CUSTOM -->
         // With custom configuration
-        let linkConfiguration = PLKConfiguration(key: "<#YOUR_PLAID_PUBLIC_KEY#>", env: .development, product: .auth)
+        let linkConfiguration = PLKConfiguration(key: "558f0fb021b507eaaefcf33b4ea86a", env: .development, product: .auth)
         linkConfiguration.clientName = "Link Demo"
         PLKPlaidLink.setup(with: linkConfiguration) { (success, error) in
             if (success) {
