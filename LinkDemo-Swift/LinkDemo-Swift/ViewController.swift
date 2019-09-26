@@ -9,6 +9,7 @@ import UIKit
 
 // <!-- SMARTDOWN_IMPORT_LINKKIT -->
 import LinkKit
+import Alamofire
 // <!-- SMARTDOWN_IMPORT_LINKKIT -->
 
 class ViewController: UIViewController {
@@ -53,9 +54,12 @@ class ViewController: UIViewController {
 #endif
     }
     
-//    func exchangeToken(publicToken: String, secret: String, publicKey: String){
-//        let client =
-//    }
+    func exchangeToken(client_id: String, secret: String, publicToken: String){
+//        let client = Plaid
+        Alamofire.request("https://sandbox.plaid.com/item/public_token/exchange", method: .post, parameters: ["client_id": client_id, "secret": secret, "public_token": publicToken]).response { response in
+            print("token response == \(response)")
+        }
+    }
 
     func handleSuccessWithToken(_ publicToken: String, metadata: [String : Any]?) {
         presentAlertViewWithTitle("Success", message: "token: \(publicToken)\nmetadata: \(metadata ?? [:])")
