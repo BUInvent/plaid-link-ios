@@ -55,9 +55,9 @@ class ViewController: UIViewController {
     }
     
     func exchangeToken(client_id: String, secret: String, publicToken: String){
-//        let client = Plaid
+        
         Alamofire.request("https://sandbox.plaid.com/item/public_token/exchange", method: .post, parameters: ["client_id": client_id, "secret": secret, "public_token": publicToken]).response { response in
-            print("token response == \(response)")
+            print("token response ==\n\(response)\nEnd of response")
         }
     }
 
@@ -133,6 +133,8 @@ extension ViewController : PLKPlaidLinkViewDelegate
             // Handle success, e.g. by storing publicToken with your service
             NSLog("Successfully linked account!\npublicToken: \(publicToken)\nmetadata: \(metadata ?? [:])")
             self.handleSuccessWithToken(publicToken, metadata: metadata)
+            
+            self.exchangeToken(client_id: "5d8a62fe8e856300113b28e2", secret: "4d2f97946ad455d8cf1223be1ac35f", publicToken: publicToken)
         }
     }
 // <!-- SMARTDOWN_DELEGATE_SUCCESS -->
